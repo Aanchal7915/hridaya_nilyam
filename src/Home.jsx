@@ -57,52 +57,52 @@ const Home = () => {
       <section
         className="relative text-white"
         style={{
-          backgroundImage:
-            "linear-gradient(120deg, rgba(37, 99, 235, 0.7) 0%, rgba(96, 165, 250, 0.7) 60%, rgba(255, 255, 255, 0.3) 100%), url('/hero-bg-2.jpg')",
+          backgroundImage: "url(/home.jpeg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
-
       >
-        <div className="relative container mx-auto px-4 py-20 lg:py-32">
+        {/* Overlay for better readability */}
+        <div className="absolute inset-0 bg-black/60 lg:bg-black/50 z-0"></div>
+        <div className="relative container mx-auto px-4 py-20 lg:py-32 z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold mb-6">
+              <h1 className="text-3xl md:text-5xl lg:text-7xl font-extrabold mb-6 drop-shadow-lg text-white">
                 Hridaya Nilayam
-                <span className="block text-base md:text-2xl lg:text-3xl font-light mt-2">
+                <span className="block text-lg md:text-3xl lg:text-4xl font-light mt-2 text-blue-200 drop-shadow">
                   Heart, Lung & Vascular Institute
                 </span>
               </h1>
-              <p className="text-sm md:text-xl mb-8 text-blue-100">
+              <p className="text-base md:text-2xl mb-8 text-blue-100 font-medium drop-shadow-lg">
                 Providing world-class cardiac, pulmonary, and vascular care with compassion and excellence.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   to="/book-appointment"
-                  className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 transition-colors"
+                  className="bg-gradient-to-r from-red-600 to-pink-500 hover:from-red-700 hover:to-pink-600 text-white px-10 py-4 rounded-xl font-bold flex items-center justify-center gap-2 shadow-lg transition-all text-lg"
                 >
-                  <Calendar className="w-5 h-5" />
+                  <Calendar className="w-6 h-6" />
                   Book Appointment
                 </Link>
                 <a
                   href="tel:+919876543210"
-                  className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-gray-100 transition-colors"
+                  className="bg-white text-blue-900 px-10 py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-gray-100 shadow-lg transition-all text-lg"
                 >
-                  <Phone className="w-5 h-5" />
+                  <Phone className="w-6 h-6" />
                   Emergency: 98765 43210
                 </a>
                 <a
                   href="https://wa.me/919876543210"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 transition-colors"
+                  className="bg-gradient-to-r from-green-600 to-teal-500 hover:from-green-700 hover:to-teal-600 text-white px-10 py-4 rounded-xl font-bold flex items-center justify-center gap-2 shadow-lg transition-all text-lg"
                 >
-                  <MessageCircle className="w-5 h-5" />
+                  <MessageCircle className="w-6 h-6" />
                   WhatsApp
                 </a>
               </div>
@@ -113,10 +113,10 @@ const Home = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-center"
             >
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
-                <Heart className="w-32 h-32 mx-auto mb-6 text-red-400" />
-                <h3 className="text-2xl font-semibold mb-4">Your Heart, Our Priority</h3>
-                <p className="text-blue-100">
+              <div className="bg-white/20 backdrop-blur-md rounded-2xl p-10 shadow-xl">
+                <Heart className="w-32 h-32 mx-auto mb-6 text-red-400 drop-shadow-lg" />
+                <h3 className="text-3xl font-bold mb-4 text-blue-900">Your Heart, Our Priority</h3>
+                <p className="text-blue-900 text-lg font-semibold">
                   Trusted by thousands of patients for comprehensive cardiac care
                 </p>
               </div>

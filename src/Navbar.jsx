@@ -104,14 +104,13 @@ const Navbar = () => {
                     to={item.path}
                     className={`flex items-center gap-1 py-2 px-3 rounded-lg transition-colors ${
                       isActive(item.path)
-                        ? 'text-blue-600 bg-blue-50'
-                        : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
+                        ? 'text-emerald-600 bg-emerald-50'
+                        : 'text-gray-700 hover:text-emerald-600 hover:bg-emerald-50'
                     }`}
                   >
                     {item.name}
                     {item.submenu && <ChevronDown className="w-4 h-4" />}
                   </Link>
-                  
                   {/* Dropdown Menu */}
                   {item.submenu && (
                     <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
@@ -120,7 +119,7 @@ const Navbar = () => {
                           <Link
                             key={subItem.name}
                             to={subItem.path}
-                            className="block px-4 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors"
+                            className="block px-4 py-2 text-gray-700 hover:text-emerald-600 hover:bg-emerald-50 transition-colors"
                           >
                             {subItem.name}
                           </Link>
@@ -161,13 +160,12 @@ const Navbar = () => {
                         onClick={() => setIsOpen(false)}
                         className={`block py-2 px-3 rounded-lg transition-colors ${
                           isActive(item.path)
-                            ? 'text-blue-600 bg-blue-50'
-                            : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
+                            ? 'text-emerald-600 bg-emerald-50'
+                            : 'text-gray-700 hover:text-emerald-600 hover:bg-emerald-50'
                         }`}
                       >
                         {item.name}
                       </Link>
-                      
                       {/* Mobile Submenu */}
                       {item.submenu && (
                         <div className="ml-4 mt-2 space-y-1">
@@ -176,7 +174,7 @@ const Navbar = () => {
                               key={subItem.name}
                               to={subItem.path}
                               onClick={() => setIsOpen(false)}
-                              className="block py-2 px-3 rounded-lg text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-colors"
+                              className="block py-2 px-3 rounded-lg text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 transition-colors"
                             >
                               {subItem.name}
                             </Link>

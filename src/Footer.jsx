@@ -62,11 +62,9 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <div className="bg-blue-600 p-2 rounded-lg">
-                <Heart className="w-8 h-8 text-white" />
-              </div>
+              <img src="/logo.png" alt="Hridaya Nilayam Logo" className="w-[80px] h-[80px] object-contain bg-white rounded-lg p-2" />
               <div>
-                <h3 className="text-xl font-bold">Hridaya Nilayam</h3>
+                <h3 className="text-xl font-bold text-emerald-700">Hridaya Nilayam</h3>
                 <p className="text-sm text-gray-400">Heart, Lung & Vascular Institute</p>
               </div>
             </div>
@@ -100,7 +98,7 @@ const Footer = () => {
                 <li key={index}>
                   <Link
                     to={link.path}
-                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                    className="text-gray-300 hover:text-emerald-400 transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -117,7 +115,7 @@ const Footer = () => {
                 <li key={index}>
                   <Link
                     to={dept.path}
-                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                    className="text-gray-300 hover:text-emerald-400 transition-colors"
                   >
                     {dept.name}
                   </Link>
@@ -134,7 +132,7 @@ const Footer = () => {
                 <li key={index}>
                   <Link
                     to={service.path}
-                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                    className="text-gray-300 hover:text-emerald-400 transition-colors"
                   >
                     {service.name}
                   </Link>
@@ -194,7 +192,7 @@ const Footer = () => {
                   <a
                     key={index}
                     href={social.url}
-                    className="text-gray-400 hover:text-blue-400 transition-colors"
+                    className="text-gray-400 hover:text-emerald-400 transition-colors"
                     aria-label={social.name}
                   >
                     {social.icon}

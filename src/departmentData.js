@@ -1,4 +1,36 @@
 const departmentData = {
+  "thoracic-surgery": {
+    title: "Thoracic Surgery",
+    description: "Specialized chest surgery for lung cancer, chest wall deformities, and thoracic conditions.",
+  image: "/thoracic-surgery.jpg",
+    services: [
+      "Lung Cancer Surgery",
+      "Chest Wall Surgery",
+      "Minimally Invasive Procedures",
+      "Robotic Surgery"
+    ],
+    specialists: [
+      "Dr. Arvind Rao – Thoracic Surgeon",
+      "Dr. Meena Joshi – Minimally Invasive Specialist"
+    ],
+    emergency: "98765 43210"
+  },
+  "rehabilitation": {
+    title: "Rehabilitation & Preventive Care",
+    description: "Comprehensive rehabilitation programs and preventive care to maintain optimal heart and lung health.",
+  image: "/rehabilitation-care.jpg",
+    services: [
+      "Cardiac Rehabilitation",
+      "Pulmonary Rehabilitation",
+      "Lifestyle Counseling",
+      "Preventive Screenings"
+    ],
+    specialists: [
+      "Dr. Sneha Patel – Rehabilitation Specialist",
+      "Dr. Manish Gupta – Preventive Care Expert"
+    ],
+    emergency: "98765 43210"
+  },
   cardiology: {
     title: "Cardiology",
     description: "Comprehensive cardiac care with state-of-the-art technology for heart diseases, heart attacks, and cardiovascular conditions.",

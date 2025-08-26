@@ -85,23 +85,24 @@ const About = () => {
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section
-        className="text-white py-20"
+        className="relative py-20"
         style={{
-          backgroundImage:
-            "linear-gradient(120deg, #2563eb 0%, #60a5fa 60%, #fff 100%), url('/hero-bg.jpg')",
+          backgroundImage: "url('/about-bg.png')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
         }}
       >
-        <div className="container mx-auto px-4 text-center">
+        {/* Overlay for readability */}
+        <div className="absolute inset-0 bg-black/60 z-0"></div>
+        <div className="relative container mx-auto px-4 text-center z-10">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-xl md:text-3xl lg:text-5xl font-bold mb-6">About Us</h1>
-            <p className="text-sm md:text-lg text-gray-700 mb-4">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-6 text-white drop-shadow-lg">About Us</h1>
+            <p className="text-lg md:text-2xl mb-4 text-blue-100 font-medium drop-shadow-lg">
               A premier healthcare institution dedicated to providing exceptional cardiac, 
               pulmonary, and vascular care with compassion and excellence.
             </p>

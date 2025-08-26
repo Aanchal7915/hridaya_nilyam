@@ -102,24 +102,25 @@ const Contact = () => {
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section
-        className="text-white py-20"
+        className="relative py-20"
         style={{
-          backgroundImage:
-            "linear-gradient(120deg, #2563eb 0%, #60a5fa 60%, #fff 100%), url('/hero-bg.jpg')",
+          backgroundImage: "url('/contact-bg.jpg')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
         }}
       >
-        <div className="container mx-auto px-4 text-center">
+        {/* Overlay for readability */}
+        <div className="absolute inset-0 bg-black/60 z-0"></div>
+        <div className="relative container mx-auto px-4 text-center z-10">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <MapPin className="w-16 h-16 mx-auto mb-6 text-blue-300" />
-            <h1 className="text-xl md:text-3xl lg:text-5xl font-bold mb-6">Contact Us</h1>
-            <p className="text-lg text-blue-100 max-w-3xl mx-auto">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-6 text-white drop-shadow-lg">Contact Us</h1>
+            <p className="text-lg md:text-2xl text-blue-100 max-w-3xl mx-auto font-medium drop-shadow-lg">
               Get in touch with us for appointments, queries, or emergency care. 
               We're here to help you 24/7.
             </p>
