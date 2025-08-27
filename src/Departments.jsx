@@ -90,7 +90,7 @@ const Departments = () => {
       description: 'Specialized chest surgery for lung cancer, chest wall deformities, and thoracic conditions.',
       features: ['Lung Cancer Surgery', 'Chest Wall Surgery', 'Minimally Invasive', 'Robotic Surgery'],
       color: 'green',
-      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      image: '/thoracic-surgery.jpg'
     },
     {
       id: 'rehabilitation',
@@ -99,8 +99,9 @@ const Departments = () => {
       description: 'Comprehensive rehabilitation programs and preventive care to maintain optimal heart and lung health.',
       features: ['Cardiac Rehabilitation', 'Pulmonary Rehabilitation', 'Lifestyle Counseling', 'Preventive Screenings'],
       color: 'indigo',
-      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      image: '/rehabilitation-care.jpg'
     }
+    
   ];
 
   const stats = [
@@ -239,13 +240,15 @@ const Departments = () => {
                 className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
               >
                 {/* Department Image */}
-                <div className="relative h-48 bg-gradient-to-br from-blue-100 to-blue-200 overflow-hidden">
+                <div
+                style={{ backgroundImage: `url(${dept.image})` }} 
+                className="relative h-48 bg-gradient-to-br from-blue-100 to-blue-200 overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-blue-800/20"></div>
                   <div className="absolute top-4 right-4">
                     {dept.icon}
                   </div>
                   <div className="absolute bottom-4 left-4">
-                    <h2 className="text-base md:text-xl font-semibold mb-2 text-blue-900">{dept.name}</h2>
+                    <h2 className="text-base md:text-xl font-bold mb-2 text-white">{dept.name}</h2>
                   </div>
                 </div>
 
